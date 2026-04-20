@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+:root {
+    --animate-shimmer: shimmer 2s infinite linear;
+    --text: #4b5563;
+    --text-h: #111827;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --accent: #7c3aed;
+    --accent-bg: rgba(124, 58, 237, 0.1);
+    --accent-border: rgba(124, 58, 237, 0.3);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --heading: 'Outfit', 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    font: 16px/1.6 var(--sans);
+    color-scheme: light dark;
+    color: var(--text);
+    background: var(--bg);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #94a3b8;
+        --text-h: #f1f5f9;
+        --bg: #0f172a;
+        --border: #1e293b;
+        --glass-bg: rgba(15, 23, 42, 0.7);
+        --glass-border: rgba(30, 41, 59, 0.5);
+        --accent: #a78bfa;
+        --accent-bg: rgba(167, 139, 250, 0.15);
+        --accent-border: rgba(167, 139, 250, 0.4);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading);
+    color: var(--text-h);
+}
+
+p {
+    margin: 0;
+}
