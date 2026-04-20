@@ -14,6 +14,7 @@ export default function BottomNav() {
           key={link.to}
           to={link.to}
           end={link.to === '/'}
+          aria-label={link.label}
           className={({ isActive }) =>
             `flex flex-col items-center gap-1 transition-all duration-300 ${
               isActive

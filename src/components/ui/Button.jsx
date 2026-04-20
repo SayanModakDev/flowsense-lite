@@ -3,6 +3,7 @@ export default function Button({ children, onClick, isLoading, disabled, classNa
     <button
       onClick={onClick}
       disabled={isLoading || disabled}
+      aria-disabled={isLoading || disabled}
       className={`
         relative w-full overflow-hidden
         bg-linear-to-r from-(--accent) to-purple-600 
